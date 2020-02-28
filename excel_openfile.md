@@ -25,3 +25,20 @@ Loop
 ' 關閉編號 #1 檔案
 Close #1
 ```
+
+# 副檔名
+
+```
+Sub GetFolder()
+    Dim path As String
+    path = Application.ActiveWorkbook.path
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    Set fd = fs.GetFolder(path) '取得資料夾
+    For Each f In fd.Files
+      If fs.GetExtensionName(f.Name) = "xlsx" Then '取得副檔名
+      Workbooks.Open f.path
+      End If
+    Next
+End Sub
+
+```
