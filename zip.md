@@ -1,3 +1,12 @@
+Sub TestRun()
+    Dim arr(2) As String
+    arr(1) = "C:\Users\BlackFloat\Desktop\excel\456.txt"
+    arr(2) = "C:\Users\BlackFloat\Desktop\excel\zip.md"
+    Call ZipFile("C:\Users\BlackFloat\Desktop\excel", "Zipped1", "C:\Users\BlackFloat\Desktop\excel\456.txt", "C:\Users\BlackFloat\Desktop\excel\zip.md", "C:\Users\BlackFloat\Desktop\excel\5566")
+    
+ 
+End Sub
+
 Sub ZipFile(strZipFilePath As String, strZipFileName As String, ParamArray arrFiles() As Variant)
  
     Dim intLoop         As Long
