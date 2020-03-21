@@ -60,6 +60,26 @@ Sub printfArray(files() As String)
     Next s
 End Sub
 ```
+* Get Same File Name without checkout extensionName
+```
+Function GetSameName(files() As String, fileName As String) As String()
+    Dim f As Variant
+    Dim FilesArr() As String
+    Dim baseName As String
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    Dim i As Integer
+    fileName = LCase(fileName)
+    For Each f In files
+        baseName = LCase(fs.GetBaseName(f))
+        If baseName = fileName Then '取得副檔名
+            ReDim Preserve FilesArr(i)
+            FilesArr(i) = f
+            i = i + 1
+        End If
+    Next f
+    GetSameName = FilesArr
+End Function
+```
 
 * Example
 
