@@ -92,3 +92,23 @@ Sub main()
     printfArray files
 End Sub
 ```
+
+## FILE operating
+
+* COPY FILE
+1. Use normal method
+```
+    FileCopy source, destination
+```
+2. Use fs
+```
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    fs.CopyFile source, destination
+```
+
+* Move FILE
+
+```
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    fs.MoveFile  source, destination
+```

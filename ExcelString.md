@@ -38,6 +38,11 @@ Dim pos As Integer
 pos = InStr("Hello, world.", "world")
 MsgBox "pos = " & pos
 ````
+* 從右邊找
+
+```
+pos =   InStrRev("Hello,world","world")
+```
 
 ## 去空白
 * 將空白去掉跟js的String.prototyp.trim()一樣的函數
